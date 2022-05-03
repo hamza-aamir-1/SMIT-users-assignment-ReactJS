@@ -20,13 +20,21 @@ function Users() {
   // const [userStatusArr, setUserStatusArr] = useState(['All', 'Active', 'Pending']);
   const userStatusArr = ['All', 'Active', 'Pending'];
 
+  const handleSelectStatus = (e) => {
+    console.log('abcdef');
+    console.log(e.target.value);
+    setUserStatus(e.target.value);
+  }
+
   return (
     <div className='bg-dark text-light'>
-      <select>
+
+      <select onChange={handleSelectStatus}>
         {userStatusArr.map(item => (
-          <option>{item}</option>
+          <option key={Math.random()} value={item}>{item}</option>
         ))}
       </select>
+
       <table className='table table-responsive text-light'>
         <tbody>
         {userDetail.map(user => user.status == userStatus && (
@@ -39,6 +47,7 @@ function Users() {
         ))}
         </tbody>
       </table>
+
     </div>
   )
 }
