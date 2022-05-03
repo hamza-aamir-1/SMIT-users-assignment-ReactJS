@@ -1,0 +1,15 @@
+.dropdown-box{
+    text-align: center;
+}
+select{
+    width: 250px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+select:focus{
+    outline: none;
+}
+td, th{
+    padding: 17px 0px !important;
+    text-align: center;
+}
